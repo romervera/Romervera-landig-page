@@ -32,12 +32,14 @@ header p {
 
 .hero-buttons {
   display: flex;
-  justify-content: flex-start;
-  gap: 10px;
-  flex-wrap: wrap;
-  padding-left: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
+.right-btn {
+  margin-left: auto;
+}
 .btn {
   padding: 12px 20px;
   border-radius: 8px;
@@ -241,7 +243,7 @@ footer {
     Blog
   </a>
 
-  <a href="#libros" class="btn libros">
+  <a href="#libros" class="btn libros right-btn">
     <img src="Book.png" class="icon-btn">
     Ver mis libros
   </a>
