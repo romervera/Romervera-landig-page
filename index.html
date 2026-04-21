@@ -76,15 +76,19 @@
       gap: 25px;
     }
 
-    .book {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
+    
+.book {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
     .book:hover {
       transform: translateY(-5px);
     }
