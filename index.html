@@ -18,6 +18,7 @@ header {
   padding: 80px 20px;
   background: linear-gradient(135deg, #111, #222);
   color: white;
+  position: relative; 
 }
 
 header h1 {
@@ -30,10 +31,9 @@ header p {
 }
 
 .hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
 }
 
 .btn {
@@ -143,6 +143,13 @@ footer {
 .book-buttons .btn {
   flex: 1;
 }
+
+.btn.libros {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
 </style>
 </head>
 
@@ -154,8 +161,8 @@ footer {
 
 
   <div class="hero-buttons">
-<a href="#libros" class="btn primary">
-  <img src="Book.png" class="icon-btn">
+<a href="#libros" class="btn libros">
+  <img src="book.png" class="icon-btn">
   Ver mis libros
 </a>
     
