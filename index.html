@@ -102,38 +102,20 @@ section p {
   border-radius: 8px;
 }
 
-  .social-links {
-  margin-top: 15px;
-}
-
-.social-links a {
-  color: white;
-  margin: 0 12px;
-  font-size: 22px;
-  transition: 0.3s;
-}
-
 .social-links {
   margin-top: 15px;
 }
 
-.social-links a {
-  color: white;
+.social-links img {
+  width: 24px;
   margin: 0 12px;
-  font-size: 22px;
-  transition: 0.3s;
+  filter: invert(1);
+  transition: transform 0.2s ease;
 }
 
-.social-links a:hover {
-  color: #007bff;
+.social-links img:hover {
+  transform: scale(1.2);
 }
-
-/* colores por red */
-.social-links a:hover .fa-instagram { color: #E1306C; }
-.social-links a:hover .fa-facebook { color: #1877F2; }
-.social-links a:hover .fa-whatsapp { color: #25D366; }
-.social-links a:hover .fa-tiktok { color: #000; }
-.social-links a:hover .fa-linkedin { color: #0077B5; }
 
 footer {
   text-align: center;
@@ -164,7 +146,6 @@ footer {
   <h1>Romer Vera</h1>
   <p>Ingeniero de Confiabilidad | Escritor | Coach</p>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <div class="hero-buttons">
     <a href="#libros" class="btn primary">Ver mis libros</a>
@@ -253,22 +234,28 @@ footer {
   <p>© 2026 Romer Vera</p>
 
   <div class="social-links">
-  <a href="https://www.instagram.com/romerentrepaginas" target="_blank">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://www.facebook.com/romerentrepaginas" target="_blank">
-    <i class="fab fa-facebook"></i>
-  </a>
-  <a href="https://wa.me/50764301358" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-  <a href="https://www.tiktok.com/@romerentrepaginas" target="_blank">
-    <i class="fab fa-tiktok"></i>
-  </a>
-  <a href="https://www.linkedin.com/in/romervera" target="_blank">
-    <i class="fab fa-linkedin"></i>
-  </a>
-</div>
+    
+    <a href="https://www.instagram.com/romerentrepaginas" target="_blank">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" width="24">
+    </a>
+
+    <a href="https://www.facebook.com/romerentrepaginas" target="_blank">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" width="24">
+    </a>
+
+    <a href="https://wa.me/50764301358" target="_blank">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" width="24">
+    </a>
+
+    <a href="https://www.tiktok.com/@romerentrepaginas" target="_blank">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" width="24">
+    </a>
+
+    <a href="https://www.linkedin.com/in/romervera" target="_blank">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" width="24">
+    </a>
+
+  </div>
 </footer>
 
 <script>
