@@ -1,120 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Romer Vera | Autor</title>
-
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background: #f4f6f8;
-      color: #222;
-    }
-
-    header {
-      text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(135deg, #111, #222);
-      color: white;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.2em;
-    }
-
-    header p {
-      margin: 10px 0 20px;
-      padding: 0 10px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 12px 25px;
-      border-radius: 8px;
-      font-weight: bold;
-      text-decoration: none;
-      color: white;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      transform: scale(1.05);
-    }
-
-    .btn.primary {
-      background: #007bff;
-    }
-
-    .btn.whatsapp {
-      background: #25D366;
-    }
-
-    section {
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    section p {
-      text-align: justify;
-      line-height: 1.7;
-      margin-bottom: 15px;
-    }
-
-    .books {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
-
-    
-.book {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  transition: 0.3s;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-    .book:hover {
-      transform: translateY(-5px);
-    }
-
-    .book img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #111;
-      color: white;
-    }
-
-    input {
-      padding: 10px;
-      margin-top: 10px;
-      width: 200px;
-    }
-  </style>
-</head>
-
 <body>
 
 <header>
@@ -127,42 +10,23 @@
   </div>
 </header>
 
-<section id="libros">
-  <h2>Mis Libros</h2>
-
-  <div class="books">
-
-    <div class="book">
-      <img src="Portada_1.jpg" alt="Manda la Vida a la V">
-      <h3>Manda la Vida a la V</h3>
-      <p>Una visión de estoicismo moderno para tomar control de tu vida y romper con la inercia.</p>
-      <a href="#" class="btn primary">Amazon</a>
-      <a href="https://wa.me/50764301358" class="btn whatsapp">WhatsApp</a>
-    </div>
-
-    <div class="book">
-      <img src="Portada_2.jpg" alt="Cuando el Aplauso se Vuelve Jaula">
-      <h3>Cuando el Aplauso se Vuelve Jaula</h3>
-      <p>Una reflexión directa sobre la dependencia de la aprobación y el costo de vivir para otros.</p>
-      <a href="#" class="btn primary">Amazon</a>
-      <a href="https://wa.me/50764301358" class="btn whatsapp">WhatsApp</a>
-    </div>
-
-  </div>
-</section>
-
+<!-- SOBRE EL AUTOR PRIMERO -->
 <section>
   <h2>Sobre el Autor</h2>
+
+  <div style="text-align:center;">
+    <img src="tu_foto.jpg" alt="Romer Vera" style="width:150px; border-radius:50%; margin-bottom:20px;">
+  </div>
 
   <p>
     Romer Vera es ingeniero de confiabilidad, escritor y coach. Integra la lógica de la ingeniería con una visión crítica del comportamiento humano y la toma de decisiones.
   </p>
 
   <p>
-    Es autor de <strong>Manda la Vida a la V</strong> (estoicismo moderno), 
-    <strong>Cuando el Aplauso se Vuelve Jaula</strong> (dependencia de la aprobación), 
-    <strong>Confiabilidad para Todos</strong> (conceptos técnicos aplicados) y 
-    <strong>Fallas Cero</strong> (análisis de fallas y mejora continua).
+    Es autor de <strong>Manda la Vida a la V</strong>, 
+    <strong>Cuando el Aplauso se Vuelve Jaula</strong>, 
+    <strong>Confiabilidad para Todos</strong> y 
+    <strong>Fallas Cero</strong>.
   </p>
 
   <p>
@@ -170,27 +34,93 @@
   </p>
 </section>
 
-<section>
-  <h2>Temas Clave</h2>
-  <p>Confiabilidad | Pensamiento Crítico | Desarrollo Personal</p>
+<!-- LIBROS -->
+<section id="libros">
+  <h2>Mis Libros</h2>
+
+  <div class="books">
+
+    <!-- LIBRO 1 -->
+    <div class="book">
+      <img src="Portada_1.jpg" id="img1">
+      <p id="desc1" style="display:none;">
+        Una visión de estoicismo moderno para tomar control de tu vida.
+      </p>
+
+      <h3>Manda la Vida a la V</h3>
+
+      <button class="btn primary" onclick="toggleBook(1)">Ver resumen</button>
+
+      <a href="#" class="btn primary">Amazon</a>
+      <a href="https://wa.me/50764301358" class="btn whatsapp">WhatsApp</a>
+    </div>
+
+    <!-- LIBRO 2 -->
+    <div class="book">
+      <img src="Portada_2.jpg" id="img2">
+      <p id="desc2" style="display:none;">
+        Reflexión sobre la dependencia de la aprobación externa.
+      </p>
+
+      <h3>Cuando el Aplauso se Vuelve Jaula</h3>
+
+      <button class="btn primary" onclick="toggleBook(2)">Ver resumen</button>
+
+      <a href="#" class="btn primary">Amazon</a>
+      <a href="https://wa.me/50764301358" class="btn whatsapp">WhatsApp</a>
+    </div>
+
+    <!-- LIBRO 3 -->
+    <div class="book">
+      <img src="Portada_3.jpg" id="img3">
+      <p id="desc3" style="display:none;">
+        Explicación práctica de la confiabilidad aplicada a la industria.
+      </p>
+
+      <h3>Confiabilidad para Todos</h3>
+
+      <button class="btn primary" onclick="toggleBook(3)">Ver resumen</button>
+
+      <a href="#" class="btn primary">Amazon</a>
+      <a href="https://wa.me/50764301358" class="btn whatsapp">WhatsApp</a>
+    </div>
+
+    <!-- LIBRO 4 -->
+    <div class="book">
+      <img src="Portada_4.jpg" id="img4">
+      <p id="desc4" style="display:none;">
+        Análisis de fallas y mentalidad de mejora continua.
+      </p>
+
+      <h3>Fallas Cero</h3>
+
+      <button class="btn primary" onclick="toggleBook(4)">Ver resumen</button>
+
+      <a href="#" class="btn primary">Amazon</a>
+      <a href="https://wa.me/50764301358" class="btn whatsapp">WhatsApp</a>
+    </div>
+
+  </div>
 </section>
 
-<section>
-  <h2>Testimonios</h2>
-  <p>“Un enfoque claro y diferente sobre la ingeniería y la vida.”</p>
-  <p>“Contenido práctico que realmente aporta valor.”</p>
-</section>
+<!-- SCRIPT -->
+<script>
+function toggleBook(id) {
+  let img = document.getElementById("img" + id);
+  let desc = document.getElementById("desc" + id);
 
-<section>
-  <h2>Contacto</h2>
-  <a href="https://wa.me/50764301358" class="btn whatsapp">Escríbeme por WhatsApp</a>
-</section>
+  if (img.style.display === "none") {
+    img.style.display = "block";
+    desc.style.display = "none";
+  } else {
+    img.style.display = "none";
+    desc.style.display = "block";
+  }
+}
+</script>
 
 <footer>
   <p>© 2026 Romer Vera</p>
-  <p><a href="#" style="color:white;">Amazon</a></p>
-  <input type="email" placeholder="Tu correo">
 </footer>
 
 </body>
-</html>
