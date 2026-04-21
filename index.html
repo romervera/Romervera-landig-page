@@ -126,13 +126,12 @@ section p {
   transition: transform 0.2s ease;
 }
 
-.btn.libros:active .icon-btn {
-  filter: brightness(0) invert(1);
+.btn.libros:hover .icon-btn {
+  transform: translateX(2px);
 }
 
-.btn.libros:hover .icon-btn {
+.btn.libros:active .icon-btn {
   filter: brightness(0) invert(1);
-  transform: translateX(2px);
 }
 
 footer {
@@ -181,9 +180,6 @@ footer {
   background: rgba(255,255,255,0.15);
 }
 
-.btn.libros:hover .icon-btn {
-  filter: invert(0);
-}
 
 .logo-top {
   margin-bottom: 10px;
