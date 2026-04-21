@@ -104,18 +104,21 @@ section p {
   border-radius: 8px;
 }
 
-.social-links {
-  margin-top: 15px;
+.social-links a {
+  display: inline-block;
+  margin: 0 12px;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .social-links img {
   width: 24px;
-  margin: 0 12px;
+  display: block; 
   filter: invert(1);
   transition: transform 0.2s ease;
 }
 
-.social-links img:hover {
+.social-links a:hover img {
   transform: scale(1.2);
 }
 
