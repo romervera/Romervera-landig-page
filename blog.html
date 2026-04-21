@@ -120,19 +120,80 @@ footer {
   font-size: 1.8em;
   margin-bottom: 5px;
 }
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.brand img {
+  width: 75px;
+  height: auto;
+}
+
+.brand h1 {
+  margin: 0;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.right-btn {
+  margin-left: auto;
+}
+
+.btn.libros {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.7);
+  padding: 10px 18px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(4px);
+  transition: all 0.25s ease;
+}
+
+.icon-btn {
+  width: 18px;
+  filter: brightness(0) invert(1);
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Romer Vera</h1>
-  <img src="logo.png" class="logo">
-  <p>Ingeniero de Confiabilidad | Autor | Pensamiento Crítico</p>
+
+  <div class="brand">
+    <img src="Logo_1.png" alt="Logo Romer Vera">
+    <h1>Romer Vera</h1>
+  </div>
+
+  <p>Ingeniero de Confiabilidad | Escritor | Coach</p>
 
   <div class="hero-buttons">
-    <a href="index.html" class="btn primary">Inicio</a>
+
+    <a href="blog.html" class="btn libros">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" class="icon-btn">
+      Blog
+    </a>
+
+    <a href="index.html" class="btn libros right-btn">
+      <img src="Book.png" class="icon-btn">
+      Página Principal
+    </a>
+
   </div>
+
 </header>
 
 <section class="blog">
