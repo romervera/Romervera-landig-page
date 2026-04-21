@@ -1,3 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Romer Vera | Autor</title>
+
+<style>
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+  color: #222;
+}
+
+header {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #111, #222);
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2em;
+}
+
+header p {
+  margin: 10px 0 20px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.primary { background: #007bff; }
+.btn.whatsapp { background: #25D366; }
+
+section {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section p {
+  text-align: justify;
+  line-height: 1.7;
+}
+
+.author-img {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.author-img img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.books {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.book {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.book img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #111;
+  color: white;
+}
+</style>
+</head>
+
 <body>
 
 <header>
@@ -10,12 +116,12 @@
   </div>
 </header>
 
-<!-- SOBRE EL AUTOR PRIMERO -->
+<!-- SOBRE EL AUTOR -->
 <section>
   <h2>Sobre el Autor</h2>
 
-  <div style="text-align:center;">
-    <img src="tu_foto.jpg" alt="Romer Vera" style="width:150px; border-radius:50%; margin-bottom:20px;">
+  <div class="author-img">
+    <img src="tu_foto.jpg">
   </div>
 
   <p>
@@ -36,80 +142,59 @@
 
 <!-- LIBROS -->
 <section id="libros">
-  <h2>Mis Libros</h2>
+<h2>Mis Libros</h2>
 
-  <div class="books">
+<div class="books">
 
-    <!-- LIBRO 1 -->
-    <div class="book">
-      <img src="Portada_1.jpg" id="img1">
-      <p id="desc1" style="display:none;">
-        Una visión de estoicismo moderno para tomar control de tu vida.
-      </p>
+<div class="book">
+  <img src="Portada_1.jpg" id="img1">
+  <p id="desc1" style="display:none;">Estoicismo moderno para tomar control de tu vida.</p>
+  <h3>Manda la Vida a la V</h3>
+  <button class="btn primary" onclick="toggleBook(1)">Ver resumen</button>
+  <a href="#" class="btn primary">Amazon</a>
+  <a href="https://wa.me/50764301358" class="btn whatsapp">WhatsApp</a>
+</div>
 
-      <h3>Manda la Vida a la V</h3>
+<div class="book">
+  <img src="Portada_2.jpg" id="img2">
+  <p id="desc2" style="display:none;">Dependencia de la aprobación y sus consecuencias.</p>
+  <h3>Cuando el Aplauso se Vuelve Jaula</h3>
+  <button class="btn primary" onclick="toggleBook(2)">Ver resumen</button>
+  <a href="#" class="btn primary">Amazon</a>
+  <a href="https://wa.me/50764301358" class="btn whatsapp">WhatsApp</a>
+</div>
 
-      <button class="btn primary" onclick="toggleBook(1)">Ver resumen</button>
+<div class="book">
+  <img src="Portada_3.jpg" id="img3">
+  <p id="desc3" style="display:none;">Confiabilidad explicada de forma práctica.</p>
+  <h3>Confiabilidad para Todos</h3>
+  <button class="btn primary" onclick="toggleBook(3)">Ver resumen</button>
+  <a href="#" class="btn primary">Amazon</a>
+  <a href="https://wa.me/50764301358" class="btn whatsapp">WhatsApp</a>
+</div>
 
-      <a href="#" class="btn primary">Amazon</a>
-      <a href="https://wa.me/50764301358" class="btn whatsapp">WhatsApp</a>
-    </div>
+<div class="book">
+  <img src="Portada_4.jpg" id="img4">
+  <p id="desc4" style="display:none;">Análisis de fallas y mejora continua.</p>
+  <h3>Fallas Cero</h3>
+  <button class="btn primary" onclick="toggleBook(4)">Ver resumen</button>
+  <a href="#" class="btn primary">Amazon</a>
+  <a href="https://wa.me/50764301358" class="btn whatsapp">WhatsApp</a>
+</div>
 
-    <!-- LIBRO 2 -->
-    <div class="book">
-      <img src="Portada_2.jpg" id="img2">
-      <p id="desc2" style="display:none;">
-        Reflexión sobre la dependencia de la aprobación externa.
-      </p>
-
-      <h3>Cuando el Aplauso se Vuelve Jaula</h3>
-
-      <button class="btn primary" onclick="toggleBook(2)">Ver resumen</button>
-
-      <a href="#" class="btn primary">Amazon</a>
-      <a href="https://wa.me/50764301358" class="btn whatsapp">WhatsApp</a>
-    </div>
-
-    <!-- LIBRO 3 -->
-    <div class="book">
-      <img src="Portada_3.jpg" id="img3">
-      <p id="desc3" style="display:none;">
-        Explicación práctica de la confiabilidad aplicada a la industria.
-      </p>
-
-      <h3>Confiabilidad para Todos</h3>
-
-      <button class="btn primary" onclick="toggleBook(3)">Ver resumen</button>
-
-      <a href="#" class="btn primary">Amazon</a>
-      <a href="https://wa.me/50764301358" class="btn whatsapp">WhatsApp</a>
-    </div>
-
-    <!-- LIBRO 4 -->
-    <div class="book">
-      <img src="Portada_4.jpg" id="img4">
-      <p id="desc4" style="display:none;">
-        Análisis de fallas y mentalidad de mejora continua.
-      </p>
-
-      <h3>Fallas Cero</h3>
-
-      <button class="btn primary" onclick="toggleBook(4)">Ver resumen</button>
-
-      <a href="#" class="btn primary">Amazon</a>
-      <a href="https://wa.me/50764301358" class="btn whatsapp">WhatsApp</a>
-    </div>
-
-  </div>
+</div>
 </section>
 
-<!-- SCRIPT -->
-<script>
-function toggleBook(id) {
-  let img = document.getElementById("img" + id);
-  let desc = document.getElementById("desc" + id);
+<footer>
+<p>© 2026 Romer Vera</p>
+</footer>
 
-  if (img.style.display === "none") {
+<script>
+function toggleBook(id){
+  let img = document.getElementById("img"+id);
+  let desc = document.getElementById("desc"+id);
+
+  if(img.style.display === "none"){
     img.style.display = "block";
     desc.style.display = "none";
   } else {
@@ -119,8 +204,5 @@ function toggleBook(id) {
 }
 </script>
 
-<footer>
-  <p>© 2026 Romer Vera</p>
-</footer>
-
 </body>
+</html>
