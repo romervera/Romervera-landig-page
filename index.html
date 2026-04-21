@@ -159,28 +159,44 @@ footer {
   width: 90px;
   height: auto;
 }
-  
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.brand img {
+  width: 50px;
+  height: auto;
+}
+
+.brand h1 {
+  margin: 0;
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="logo-top">
-<img src="Logo.png" alt="Logo Romer Vera">
-</div>
-  
-<h1>Romer Vera</h1>
-<p>Ingeniero de Confiabilidad | Escritor | Coach</p>
 
+  <div class="brand">
+    <img src="Logo_1.png" alt="Logo Romer Vera">
+    <h1>Romer Vera</h1>
+  </div>
+
+  <p>Ingeniero de Confiabilidad | Escritor | Coach</p>
 
   <div class="hero-buttons">
-<a href="#libros" class="btn libros">
-  <img src="Book.png" class="icon-btn">
-  Ver mis libros
-</a>
-    
+    <a href="#libros" class="btn libros">
+      <img src="book.png" class="icon-btn">
+      Ver mis libros
+    </a>
   </div>
+
 </header>
 
 <!-- SOBRE EL AUTOR -->
