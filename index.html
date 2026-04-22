@@ -6,6 +6,8 @@
 <title>Romer Vera | Autor</title>
 
 <style>
+
+ 
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -255,6 +257,50 @@ h3 {
   font-size: 0.95em;
 }
 
+.carousel-section {
+  text-align: center;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-track img {
+  width: 100%;
+  max-width: 800px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+  
 </style>
 </head>
 
@@ -309,7 +355,24 @@ h3 {
   </p>
 </section>
 
+<section class="carousel-section">
 
+  <h2>Galería</h2>
+
+  <div class="carousel">
+    <button class="carousel-btn prev">&#10094;</button>
+
+    <div class="carousel-track">
+      <img src="img1.jpg">
+      <img src="img2.jpg">
+      <img src="img3.jpg">
+      <img src="img4.jpg">
+    </div>
+
+    <button class="carousel-btn next">&#10095;</button>
+  </div>
+
+</section>
 
 <footer>
   <p>© 2026 Romer Vera</p>
@@ -354,5 +417,26 @@ function toggleBook(id){
 }
 </script>
 
+ <script>
+const track = document.querySelector('.carousel-track');
+const images = document.querySelectorAll('.carousel-track img');
+
+let index = 0;
+
+document.querySelector('.next').onclick = () => {
+  index = (index + 1) % images.length;
+  updateCarousel();
+};
+
+document.querySelector('.prev').onclick = () => {
+  index = (index - 1 + images.length) % images.length;
+  updateCarousel();
+};
+
+function updateCarousel() {
+  track.style.transform = `translateX(-${index * 100}%)`;
+}
+</script> 
+  
 </body>
 </html>
