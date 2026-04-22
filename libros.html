@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Romer Vera | Autor</title>
+
+<style>
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+  color: #222;
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #111, #222);
+  color: white;
+  position: relative; 
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2em;
+}
+
+header p {
+  margin: 10px 0 20px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 100px;         
+}
+
+.right-btn {
+  margin-left: auto;
+}
+.btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 3px 0 rgba(0,0,0,0.2);
+  transition: all 0.1s ease;
+}
+
+.btn.lector {
+  background: #8B5E3C;
+  color: #fff;
+}
+
+.btn.lector:hover {
+  background: #6f472c;
+}
+
+.btn.primary { background: #007bff; }
+.btn.whatsapp { background: #25D366; }
+
+section {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section p {
+  text-align: justify;
+  line-height: 1.7;
+}
+
+.author-img {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.author-img img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  object-position: 60% 5%;
+  border-radius: 50%;
+  background: #fff;
+  padding: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+  display: block;
+  margin: 0 auto;
+}
+
+.books {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.book {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.book img {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 12px;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.social-links img {
+  width: 24px;
+  display: block; 
+  filter: invert(1);
+  transition: transform 0.2s ease;
+}
+
+.social-links a:hover img {
+  transform: scale(1.2);
+}
+
+.icon-btn {
+  width: 18px;
+  margin-right: 6px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s ease;
+}
+
+.btn.libros:hover .icon-btn {
+  transform: translateX(2px);
+}
+
+.btn.libros:active .icon-btn {
+  filter: brightness(0) invert(1);
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #111;
+  color: white;
+}
+
+h3 {
+  margin-bottom: 5px;
+}
+
+.btn.resumen {
+  background: #666;
+  color: #fff;
+  font-size: 0.78em;
+  padding: 7px 12px;
+  border-radius: 8px;
+  display: block;
+  width: 160px;
+  margin: 2px auto 8px auto;
+  text-align: center;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.2);
+}
+
+.btn.resumen:hover {
+  background: #444;
+}
+
+.book-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.book-buttons .btn {
+  font-size: 0.78em;
+  padding: 8px 10px;
+  white-space: nowrap;
+}
+
+.btn.libros {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.7);
+  padding: 10px 18px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(4px);
+  transition: all 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn.libros:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: white;
+}
+
+.btn.libros:active {
+  transform: scale(0.96);
+  background: rgba(255,255,255,0.15);
+}
+
+
+.logo-top {
+  margin-bottom: 10px;
+}
+
+.logo-top img {
+  width: 90px;
+  height: auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.brand img {
+  width: 75px;
+  height: auto;
+}
+
+.brand h1 {
+  margin: 0;
+}
+
+.book-desc {
+  text-align: justify;
+  max-width: 260px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 0.95em;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="brand">
+    <img src="Logo_1.png" alt="Logo Romer Vera">
+    <h1>Romer Vera</h1>
+  </div>
+
+  <p>Ingeniero de Confiabilidad | Escritor | Coach</p>
+
+<div class="hero-buttons">
+
+  <a href="blog.html" class="btn libros">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" class="icon-btn">
+    Blog
+  </a>
+
+  <a href="#libros" class="btn libros right-btn">
+    <img src="Book.png" class="icon-btn">
+    Ver mis libros
+  </a>
+
+</div>
+
+</header>
+
+
+<!-- LIBROS -->
+<section id="libros">
+<h2>Mis Libros</h2>
+
+<div class="books">
+
+<div class="book">
+  <img src="Portada_1.jpg" id="img1">
+  <p id="desc1" class="book-desc" style="display:none;">
+En un mundo que te empuja a correr, reaccionar y vivir en automático, este libro no viene a darte más ruido, sino una ventaja: aprender a pensar mejor cuando todo se desordena. Manda la Vida a la V no es teoría para admirar, es entrenamiento para vivir. A través de la sabiduría de Marco Aurelio, Séneca y Epicteto, traducida al caos moderno, descubrirás cómo mantener la calma cuando todo falla, soltar lo que no controlas y tomar decisiones con claridad cuando más importa. No te promete una vida fácil, pero sí algo más útil: una mente firme, capaz de convertir la presión, el miedo y el fracaso en carácter.
+</p>
+  <h3>Manda la Vida a la V</h3>
+
+<button class="btn resumen" onclick="toggleBook(1)">
+  Ver resumen
+</button>
+
+<div class="book-buttons">
+
+  <a href="https://a.co/d/0dgyR5hA" class="btn primary" target="_blank">
+    🛒 Amazon
+  </a>
+
+  <a href="https://share.google/OBGjzULlt3j22qHHP" class="btn lector" target="_blank">
+    📚 El Lector
+  </a>
+
+  <a href="https://wa.me/50764301358?text=Hola,%20quiero%20cotizar%20el%20libro%20Manda%20la%20Vida%20a%20la%20V" 
+     class="btn whatsapp" target="_blank">
+     💬 WhatsApp
+  </a>
+</div>
+</div>
+<div class="book">
+  <img src="Portada_2.jpg" id="img2">
+  <p id="desc2" class="book-desc" style="display:none;">
+Este libro explora cómo la necesidad de aprobación puede convertirse en una jaula invisible que condiciona tus decisiones y tu forma de vivir. A través de reflexiones y herramientas prácticas, muestra cómo muchas personas terminan construyendo una identidad basada en agradar a los demás, perdiendo conexión con su autenticidad. Es una invitación a cuestionarte, recuperar tu voz y tomar decisiones desde tu coherencia, no desde el “qué dirán”.
+</p>
+  <h3>Cuando el Aplauso se Vuelve Jaula</h3>
+
+<button class="btn resumen" onclick="toggleBook(2)">
+  Ver resumen
+</button>
+
+<div class="book-buttons">
+
+  <a href="https://a.co/d/07uZN0qu" class="btn primary" target="_blank">
+    🛒 Amazon
+  </a>
+
+  <a href="https://wa.me/50764301358?text=Hola,%20quiero%20cotizar%20el%20libro%20Cuando%20el%20Aplauso%20se%20Vuelve%20Jaula" 
+     class="btn whatsapp" target="_blank">
+     💬 WhatsApp
+  </a>
+</div>
+</div>
+<div class="book">
+  <img src="portada_3.jpg" id="img3">
+<p id="desc3" class="book-desc" style="display:none;">
+La confiabilidad no es solo un concepto técnico, es la diferencia entre que las cosas funcionen… o fallen cuando más las necesitas. Este libro convierte un tema complejo en una guía clara y práctica, mostrando cómo el diseño, el mantenimiento y la toma de decisiones impactan desde un equipo industrial hasta tu vida diaria. Aprenderás a dejar de reaccionar ante problemas y empezar a anticiparlos, entendiendo que la verdadera confiabilidad no es evitar fallas, sino saber gestionarlas antes de que te cuesten tiempo, dinero o tranquilidad.
+</p>  
+  <h3>Confiabilidad para Todos</h3>
+
+<button class="btn resumen" onclick="toggleBook(3)">
+  Ver resumen
+</button>
+
+<div class="book-buttons">
+
+  <a href="https://a.co/d/0c3BFUEe" class="btn primary" target="_blank">
+    🛒 Amazon
+  </a>
+
+  <a href="https://wa.me/50764301358?text=Hola,%20quiero%20cotizar%20el%20libro%20Confiabilidad%20para%20Todos" 
+     class="btn whatsapp" target="_blank">
+     💬 WhatsApp
+  </a>
+</div>
+</div>
+<div class="book">
+  <img src="portada_4.jpg" id="img4">
+ <p id="desc4" class="book-desc" style="display:none;">
+Este libro es una guía práctica para aplicar el Análisis de Causa Raíz (ACR) como herramienta estratégica en la resolución de problemas y la mejora continua. Enfocado en profesionales de mantenimiento, calidad y operaciones, te enseña a ir más allá de los síntomas para identificar causas reales, evitar la recurrencia de fallas y fortalecer la confiabilidad. Más que un manual, es una invitación a dejar de corregir superficialmente y empezar a comprender, aprender y mejorar con criterio.
+</p>
+  <h3>Fallas Cero</h3>
+
+<button class="btn resumen" onclick="toggleBook(4)">
+  Ver resumen
+</button>
+
+<div class="book-buttons">
+
+  <a href="https://a.co/d/04cEEJKs" class="btn primary" target="_blank">
+    🛒 Amazon
+  </a>
+
+  <a href="https://wa.me/50764301358?text=Hola,%20quiero%20cotizar%20el%20libro%20Fallas%20Cero" 
+     class="btn whatsapp" target="_blank">
+     💬 WhatsApp
+  </a>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+  <p>© 2026 Romer Vera</p>
+
+  <div class="social-links">
+    
+    <a href="https://www.instagram.com/romerentrepaginas" target="_blank">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" width="24">
+    </a>
+
+    <a href="https://www.facebook.com/profile.php?id=61582410552603" target="_blank">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" width="24">
+    </a>
+
+    <a href="https://wa.me/50764301358" target="_blank">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" width="24">
+    </a>
+
+    <a href="https://www.tiktok.com/@romerentrepaginas" target="_blank">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" width="24">
+    </a>
+
+    <a href="https://www.linkedin.com/in/romerverabonilla" target="_blank">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" width="24">
+    </a>
+
+  </div>
+</footer>
+
+<script>
+function toggleBook(id){
+  let img = document.getElementById("img"+id);
+  let desc = document.getElementById("desc"+id);
+
+  if(img.style.display === "none"){
+    img.style.display = "block";
+    desc.style.display = "none";
+  } else {
+    img.style.display = "none";
+    desc.style.display = "block";
+  }
+}
+</script>
+
+</body>
+</html>
