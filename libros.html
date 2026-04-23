@@ -265,32 +265,36 @@ h3 {
 }
 
 .mobile-menu {
-  position: fixed;
-  top: 0;
-  right: -250px;
-  width: 250px;
-  height: 100%;
+  position: absolute;
+  top: 60px; /* debajo del header */
+  right: 20px;
+  width: 200px;
   background: #111;
-  display: flex;
+  border-radius: 8px;
+  display: none;
   flex-direction: column;
-  padding-top: 60px;
-  transition: 0.3s;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   z-index: 2000;
 }
 
 .mobile-menu a {
   color: white;
-  padding: 15px 20px;
+  padding: 12px 15px;
   text-decoration: none;
   border-bottom: 1px solid #333;
+}
+
+.mobile-menu a:last-child {
+  border-bottom: none;
 }
 
 .mobile-menu a:hover {
   background: #222;
 }
 
+/* mostrar menú */
 .mobile-menu.active {
-  right: 0;
+  display: flex;
 }
   
 </style>
