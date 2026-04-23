@@ -39,12 +39,18 @@ header p {
 }
 
 .header-top {
-  display: flex;
+  display: grid;
+  grid-template-columns: 80px 1fr 80px; /* 🔴 clave */
   align-items: center;
 }
 
+.logo-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .logo-left img {
-  height: 85px;
+  height: 75px;
 }
 
 .title-center {
@@ -59,12 +65,10 @@ header p {
   letter-spacing: 1px;
 }
 
-/* subtítulo centrado abajo */
 .subtitle {
   text-align: center;
-  font-size: 15px;
   margin-top: 5px;
-  letter-spacing: 0.5px;
+  font-size: 15px;
 }
  
  
@@ -164,14 +168,6 @@ h3 {
   height: auto;
 }
 
-.logo-left,
-.menu-icon {
-  width: 80px; /* mismo ancho en ambos lados */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
- 
 .brand {
   display: flex;
   align-items: center;
@@ -240,10 +236,10 @@ h3 {
 }
 
 .menu-icon {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 28px;
   cursor: pointer;
   color: white;
 }
