@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Romer Vera</title>
+
+<style>
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+  color: #222;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 15px 20px; /* más delgado */
+  background: linear-gradient(135deg, #111, #222);
+  color: white;
+
+  position: sticky;   /* 🔴 lo fija */
+  top: 0;
+  z-index: 1000;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3); /* mejora visual */
+}
+
+
+header h1 {
+  margin: 0;
+  font-size: 2.2em;
+}
+
+.logo {
+  width: 100px;
+  display: block;
+  margin: 15px auto;
+}
+
+header p {
+  margin: 10px 0 20px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 100px;         
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  border: none;
+}
+
+.btn.primary { background: #007bff; }
+
+/* BLOG */
+.blog {
+  max-width: 800px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+.blog h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.blog p {
+  text-align: justify;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* FIRMA */
+.firma {
+  margin-top: 40px;
+  text-align: right;
+  font-style: italic;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #111;
+  color: white;
+}
+
+/* REDES */
+.social-links {
+  margin-top: 15px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 12px;
+}
+
+.social-links img {
+  width: 24px;
+  filter: invert(1);
+  transition: transform 0.2s ease;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.brand img {
+  width: 75px;
+  height: auto;
+}
+
+.brand h1 {
+  margin: 0;
+}
+
+.texto-blog {
+  text-align: justify;
+  white-space: pre-line;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.right-btn {
+  margin-left: auto;
+}
+
+.btn.libros {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.7);
+  padding: 10px 18px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(4px);
+  transition: all 0.25s ease;
+}
+
+.icon-btn {
+  width: 18px;
+  filter: brightness(0) invert(1);
+}
+
+.menu-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 200px;
+  background: #111;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  z-index: 2000;
+
+  display: flex;
+  flex-direction: column;
+
+  /* estado oculto */
+  opacity: 0;
+  transform: translateY(-15px) scale(0.95);
+  pointer-events: none;
+
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.mobile-menu a {
+  color: white;
+  padding: 12px 15px;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+}
+
+.mobile-menu a:last-child {
+  border-bottom: none;
+}
+
+.mobile-menu a:hover {
+  background: #222;
+}
+
+/* mostrar menú */
+.mobile-menu.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+  
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="brand">
+    <img src="Logo_1.png" alt="Logo Romer Vera">
+    <h1>Entre Páginas</h1>
+  </div>
+
+  <p>Más allá de la técnica: entender, cuestionar y actuar</p>
+
+  
+  <!-- 🔥 AQUÍ VA EL MENÚ -->
+
+  <div class="menu-icon" onclick="toggleMenu()">
+    ☰
+  </div>
+
+  <nav id="mobileMenu" class="mobile-menu">
+    <a href="index.html">Inicio</a>
+    <a href="blog.html">Blog</a>
+    <a href="libros.html">Mis Libros</a>
+  </nav>
+
+</header>
+<section class="blog">
+
+<h2>Donde la Técnica se Vuelve Humana</h2>
+
+<p class="texto-blog">
+En este espacio no encontrarás contenido improvisado ni escrito para llenar páginas. Este blog es una extensión de lo que soy: ingeniero de confiabilidad, escritor y coach. Un punto de encuentro entre la técnica, la experiencia y la reflexión.
+
+Comparto conocimiento técnico, aprendizajes de vida y desarrollo personal, no como elementos aislados, sino como partes de un mismo sistema. Porque la forma en que pensamos define cómo decidimos, y eso se refleja directamente en los resultados, tanto en la industria como en la vida.
+
+Este no es un espacio dictado por quien escribe. Se construye también con quienes leen, cuestionan y deciden quedarse. Ustedes marcan el ritmo; yo aporto experiencia, criterio y herramientas.
+
+Aquí abordaremos temas presentes en mis libros, nuevos proyectos y análisis críticos sobre lo que hemos construido hasta ahora. No todo será cómodo, pero sí útil. El crecimiento rara vez ocurre en lo evidente.
+
+He entendido que mis distintas facetas no compiten, se integran. Lejos de alejarme de la ingeniería, el pensamiento crítico, la escritura y el coaching la fortalecen. Porque ninguna estrategia de mantenimiento, ninguna tecnología y ningún equipo funcionan por sí solos.
+
+Todo depende de las personas.
+
+Personas capacitadas, comprometidas y con criterio.
+
+Ahí comienza la verdadera confiabilidad.
+  </p>
+
+  <div class="firma">
+    — Romer Vera
+</div>
+</section>
+
+<footer>
+  <p>© 2026 Romer Vera</p>
+
+  <div class="social-links">
+    
+    <a href="https://www.instagram.com/romerentrepaginas" target="_blank">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" width="24">
+    </a>
+
+    <a href="https://www.facebook.com/profile.php?id=61582410552603" target="_blank">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" width="24">
+    </a>
+
+    <a href="https://wa.me/50764301358" target="_blank">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" width="24">
+    </a>
+
+    <a href="https://www.tiktok.com/@romerentrepaginas" target="_blank">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" width="24">
+    </a>
+
+    <a href="https://www.linkedin.com/in/romerverabonilla" target="_blank">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" width="24">
+    </a>
+
+  </div>
+</footer>
+
+<script>
+function toggleBook(id){
+  let img = document.getElementById("img"+id);
+  let desc = document.getElementById("desc"+id);
+
+  if(img.style.display === "none"){
+    img.style.display = "block";
+    desc.style.display = "none";
+  } else {
+    img.style.display = "none";
+    desc.style.display = "block";
+  }
+}
+</script>
+
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  menu.classList.toggle("active");
+}
+</script>
+
+  
+<script>
+document.addEventListener("click", function(e) {
+
+  const menu = document.getElementById("mobileMenu");
+  const icon = document.querySelector(".menu-icon");
+
+  // si el clic NO fue dentro del menú ni del icono
+  if (!menu.contains(e.target) && !icon.contains(e.target)) {
+    menu.classList.remove("active");
+  }
+
+});
+</script>
+  
+
+  
+</body>
+</html>
