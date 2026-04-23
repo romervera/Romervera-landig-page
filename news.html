@@ -273,18 +273,31 @@ footer {
 }
 
 .book-cover {
-  width: 100%;
-  text-align: center;
   margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .book-cover img {
   width: 180px;
-  max-width: 80%;
-  display: block;
-  margin: 0 auto;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  border-radius: 12px;
+
+  /* sombra base */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+
+  /* transición suave */
+  transition: all 0.3s ease;
+
+  /* efecto flotante base */
+  transform: translateY(0);
+}
+
+.book-cover img:hover {
+  transform: translateY(-8px) scale(1.02);
+
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.35),
+    0 5px 15px rgba(0,0,0,0.2);
 }
   
 </style>
