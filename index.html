@@ -38,7 +38,34 @@ header p {
   margin: 5px 0 0;
 }
 
-.hero-buttons {
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-left img {
+  height: 40px;
+}
+
+.title-center {
+  flex: 1;
+  text-align: center;
+}
+
+.title-center h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+/* subtítulo centrado abajo */
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 5px;
+}
+ 
+ .hero-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -305,21 +332,31 @@ h3 {
 
 <header>
 
-  <div class="brand">
-    <img src="Logo_1.png" alt="Logo Romer Vera">
-    <h1>Romer Vera</h1>
+  <div class="header-top">
+
+    <!-- IZQUIERDA: LOGO -->
+    <div class="logo-left">
+      <img src="Logo_1.png" alt="Logo Romer Vera">
+    </div>
+
+    <!-- CENTRO: NOMBRE -->
+    <div class="title-center">
+      <h1>Romer Vera</h1>
+    </div>
+
+    <!-- DERECHA: MENÚ -->
+    <div class="menu-icon" onclick="toggleMenu()">
+      ☰
+    </div>
+
   </div>
 
-  <p>Ingeniero de Confiabilidad | Escritor | Coach</p>
+  <!-- SUBTÍTULO ABAJO -->
+  <p class="subtitle">
+    Ingeniero de Confiabilidad | Escritor | Coach
+  </p>
 
-  
-
-  <!-- 🔥 AQUÍ VA EL MENÚ -->
-
-  <div class="menu-icon" onclick="toggleMenu()">
-    ☰
-  </div>
-
+  <!-- MENÚ DESPLEGABLE -->
   <nav id="mobileMenu" class="mobile-menu">
     <a href="index.html">Inicio</a>
     <a href="blog.html">Blog</a>
@@ -327,7 +364,6 @@ h3 {
   </nav>
 
 </header>
-
 <!-- SOBRE EL AUTOR -->
 <section>
   <h2>Sobre el Autor</h2>
