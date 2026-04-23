@@ -255,6 +255,44 @@ h3 {
   font-size: 0.95em;
 }
 
+.menu-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  transition: 0.3s;
+  z-index: 2000;
+}
+
+.mobile-menu a {
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+}
+
+.mobile-menu a:hover {
+  background: #222;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+  
 </style>
 </head>
 
@@ -269,19 +307,19 @@ h3 {
 
   <p>Confiabilidad, Coaching y Desarrollo Personal</p>
 
-<div class="hero-buttons">
+ 
 
-  <a href="index.html" class="btn libros">
-    <img src="home.png" class="icon-btn">
-    Página Principal
-  </a>
+  <!-- 🔥 AQUÍ VA EL MENÚ -->
 
-  <a href="blog.html" class="btn libros">
-    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" class="icon-btn">
-    Entre Páginas
-  </a>
+  <div class="menu-icon" onclick="toggleMenu()">
+    ☰
+  </div>
 
-</div>
+  <nav id="mobileMenu" class="mobile-menu">
+    <a href="index.html">Inicio</a>
+    <a href="blog.html">Blog</a>
+    <a href="libros.html">Mis Libros</a>
+  </nav>
 
 </header>
 
@@ -434,5 +472,16 @@ function toggleBook(id){
 }
 </script>
 
+<script>
+document.addEventListener("click", function(event) {
+  const menu = document.getElementById("mobileMenu");
+  const icon = document.querySelector(".menu-icon");
+
+  if (!menu.contains(event.target) && !icon.contains(event.target)) {
+    menu.classList.remove("active");
+  }
+});
+</script>
+  
 </body>
 </html>
