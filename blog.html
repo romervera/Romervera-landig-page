@@ -166,15 +166,23 @@ footer {
 
 .mobile-menu {
   position: absolute;
-  top: 60px; /* debajo del header */
+  top: 60px;
   right: 20px;
   width: 200px;
   background: #111;
   border-radius: 8px;
-  display: none;
-  flex-direction: column;
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   z-index: 2000;
+
+  display: flex;
+  flex-direction: column;
+
+  /* estado oculto */
+  opacity: 0;
+  transform: translateY(-15px) scale(0.95);
+  pointer-events: none;
+
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .mobile-menu a {
@@ -194,7 +202,9 @@ footer {
 
 /* mostrar menú */
 .mobile-menu.active {
-  display: flex;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
 }
   
 </style>
@@ -294,12 +304,31 @@ function toggleBook(id){
   }
 }
 </script>
+
+
 <script>
 function toggleMenu() {
   const menu = document.getElementById("mobileMenu");
   menu.classList.toggle("active");
 }
 </script>
+
+  
+<script>
+document.addEventListener("click", function(e) {
+
+  const menu = document.getElementById("mobileMenu");
+  const icon = document.querySelector(".menu-icon");
+
+  // si el clic NO fue dentro del menú ni del icono
+  if (!menu.contains(e.target) && !icon.contains(e.target)) {
+    menu.classList.remove("active");
+  }
+
+});
+</script>
+  
+
   
 </body>
 </html>
