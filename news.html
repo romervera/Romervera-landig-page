@@ -230,16 +230,12 @@ footer {
 }
 
 .book-highlight {
-  display: block;          /* 🔴 clave: quitar flex */
-  text-align: center;      /* centra contenido */
+  display: flex;
+  flex-direction: column;   /* 🔴 clave */
+  align-items: center;      /* 🔴 centra todo */
   margin-top: 30px;
 }
 
-.book-cover img {
-  width: 220px;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-}
 
 .book-info {
   flex: 1;
@@ -272,6 +268,7 @@ footer {
 
 .proyectos h2 {
   text-align: center;
+  width: 100%;
 }
 
 .book-cover {
@@ -280,8 +277,11 @@ footer {
 }
 
 .book-cover img {
+  width: 220px;
   display: block;
   margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
   
 </style>
