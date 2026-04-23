@@ -213,6 +213,39 @@ footer {
   transform: translateY(0) scale(1);
   pointer-events: auto;
 }
+
+.proyectos {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.book-highlight {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap; /* clave para móvil */
+}
+
+.book-cover img {
+  width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.book-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.book-info h3 {
+  margin-top: 0;
+}
+
+.book-info p {
+  text-align: justify;
+  line-height: 1.6;
+}
   
 </style>
 </head>
@@ -223,7 +256,7 @@ footer {
 
   <div class="brand">
     <img src="Logo_1.png" alt="Logo Romer Vera">
-    <h1>Entre Páginas</h1>
+    <h1>Nuevos Proyectos Literarios</h1>
   </div>
 
   <p>Más allá de la técnica: entender, cuestionar y actuar</p>
@@ -243,17 +276,30 @@ footer {
   </nav>
 
 </header>
-<section class="blog">
+  
+<section class="proyectos">
+  <h2>Paradoja Mortal</h2>
 
-<h2>Próximos proyectos literarios en desarrollo</h2>
+  <div class="book-highlight">
 
-<p class="texto-blog">
-En Desarrollo...
-  </p>
+    <div class="book-cover">
+      <img src="Paradoja_Mortal.png" alt="Portada del libro">
+    </div>
 
-  <div class="firma">
-    — Romer Vera
-</div>
+    <div class="book-info">
+      <h3>Paradoja Mortal</h3>
+      <p>
+        Aquí va una síntesis breve del libro. No expliques todo. Solo lo suficiente 
+        para generar interés. Piensa en esto como un “anzuelo”, no como un resumen completo.
+      </p>
+
+      <a href="#" class="btn primary">Próximamente</a>
+    </div>
+
+  </div>
+
+</section>
+  
 </section>
 
 <footer>
