@@ -230,11 +230,9 @@ footer {
 }
 
 .book-highlight {
-  display: flex;
-  align-items: center;
-  gap: 30px;
+  display: block;          /* 🔴 clave: quitar flex */
+  text-align: center;      /* centra contenido */
   margin-top: 30px;
-  flex-wrap: wrap; /* clave para móvil */
 }
 
 .book-cover img {
@@ -270,6 +268,20 @@ footer {
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 0.5px;
+}
+
+.proyectos h2 {
+  text-align: center;
+}
+
+.book-cover {
+  width: 100%;
+  text-align: center;
+}
+
+.book-cover img {
+  display: block;
+  margin: 0 auto;
 }
   
 </style>
