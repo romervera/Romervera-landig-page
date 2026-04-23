@@ -15,10 +15,15 @@ body {
 
 header {
   text-align: center;
-  padding: 15px 20px;
+  padding: 15px 20px; /* más delgado */
   background: linear-gradient(135deg, #111, #222);
   color: white;
-  position: relative; 
+
+  position: sticky;   /* 🔴 lo fija */
+  top: 0;
+  z-index: 1000;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3); /* mejora visual */
 }
 
 header h1 {
