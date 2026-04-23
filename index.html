@@ -198,6 +198,26 @@ h3 {
   background: #000;
 }
 
+.carousel-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.carousel-dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carousel-dots span.active {
+  background: #333;
+}
+ 
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -349,20 +369,22 @@ h3 {
 
   <h2>Galería de Imágenes</h2>
 
-  <div class="carousel">
-    <button class="carousel-btn prev">&#10094;</button>
+ <div class="carousel">
+  <button class="carousel-btn prev">&#10094;</button>
 
-    <div class="carousel-track">
-      <img src="img1.jpeg">
-      <img src="img2.jpeg">
-      <img src="img3.png">
-      <img src="img4.jpeg">
-      <img src="img5.jpeg">
-      <img src="img6.jpeg">
-    </div>
-
-    <button class="carousel-btn next">&#10095;</button>
+  <div class="carousel-track">
+    <img src="img1.jpeg">
+    <img src="img2.jpeg">
+    <img src="img3.png">
+    <img src="img4.jpeg">
+    <img src="img5.jpeg">
+    <img src="img6.jpeg">
   </div>
+
+  <div class="carousel-dots"></div>
+
+  <button class="carousel-btn next">&#10095;</button>
+</div>
 
 </section>
 
@@ -410,6 +432,8 @@ function toggleBook(id){
 }
 </script>
 
+/* Script Carrusel */
+  
 <script>
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -417,26 +441,63 @@ document.addEventListener("DOMContentLoaded", function(){
   const images = document.querySelectorAll('.carousel-track img');
   const nextBtn = document.querySelector('.next');
   const prevBtn = document.querySelector('.prev');
+  const dotsContainer = document.querySelector('.carousel-dots');
 
   let index = 0;
+  let interval;
+
+  // Crear puntos
+  images.forEach((_, i) => {
+    const dot = document.createElement("span");
+    dot.addEventListener("click", () => {
+      index = i;
+      updateCarousel();
+      resetAutoSlide();
+    });
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll('.carousel-dots span');
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+  }
 
   nextBtn.addEventListener("click", () => {
     index = (index + 1) % images.length;
     updateCarousel();
+    resetAutoSlide();
   });
 
   prevBtn.addEventListener("click", () => {
     index = (index - 1 + images.length) % images.length;
     updateCarousel();
+    resetAutoSlide();
   });
 
-  function updateCarousel() {
-    track.style.transform = `translateX(-${index * 100}%)`;
+  function autoSlide() {
+    interval = setInterval(() => {
+      index = (index + 1) % images.length;
+      updateCarousel();
+    }, 4000); // cada 4 segundos
   }
+
+  function resetAutoSlide() {
+    clearInterval(interval);
+    autoSlide();
+  }
+
+  // iniciar
+  updateCarousel();
+  autoSlide();
 
 });
 </script>
 
+ 
  <script>
 function toggleMenu() {
   const menu = document.getElementById("mobileMenu");
