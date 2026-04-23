@@ -441,6 +441,20 @@ function toggleMenu() {
   menu.classList.toggle("active");
 }
 </script>
+
+<script>
+document.addEventListener("click", function(e) {
+
+  const menu = document.getElementById("mobileMenu");
+  const icon = document.querySelector(".menu-icon");
+
+  // si el clic NO fue dentro del menú ni del icono
+  if (!menu.contains(e.target) && !icon.contains(e.target)) {
+    menu.classList.remove("active");
+  }
+
+});
+</script>
  
 </body>
 </html>
