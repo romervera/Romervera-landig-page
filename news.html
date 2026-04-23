@@ -149,13 +149,36 @@ footer {
   filter: brightness(0) invert(1);
 }
 
+.header-top {
+  display: grid;
+  grid-template-columns: 70px 1fr 50px;
+  align-items: center;
+}
+
+.logo-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo-left img {
+  height: 45px;
+}
+
+.title-center {
+  text-align: center;
+}
+
 .menu-icon {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 28px;
+  text-align: right;
+  font-size: 26px;
   cursor: pointer;
   color: white;
+}
+
+.subtitle {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 14px;
 }
 
 .mobile-menu {
@@ -256,20 +279,31 @@ footer {
 
 <header>
 
-  <div class="brand">
-    <img src="Logo_1.png" alt="Logo Romer Vera">
-    <h1>Nuevos Proyectos</h1>
+  <div class="header-top">
+
+    <!-- IZQUIERDA -->
+    <div class="logo-left">
+      <img src="Logo_1.png" alt="Logo Romer Vera">
+    </div>
+
+    <!-- CENTRO -->
+    <div class="title-center">
+      <h1>Nuevos Proyectos</h1>
+    </div>
+
+    <!-- DERECHA -->
+    <div class="menu-icon" onclick="toggleMenu()">
+      ☰
+    </div>
+
   </div>
 
-  <p>Lo que está tomando forma ahora</p>
+  <!-- SUBTÍTULO -->
+  <p class="subtitle">
+    Lo que está tomando forma ahora
+  </p>
 
-  
-  <!-- 🔥 AQUÍ VA EL MENÚ -->
-
-  <div class="menu-icon" onclick="toggleMenu()">
-    ☰
-  </div>
-
+  <!-- MENÚ -->
   <nav id="mobileMenu" class="mobile-menu">
     <a href="index.html">Inicio</a>
     <a href="blog.html">Blog</a>
