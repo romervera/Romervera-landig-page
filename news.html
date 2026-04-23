@@ -246,6 +246,12 @@ footer {
   text-align: justify;
   line-height: 1.6;
 }
+
+.auto-text p {
+  margin-bottom: 12px;
+  text-align: justify;
+  line-height: 1.6;
+}
   
 </style>
 </head>
@@ -256,10 +262,10 @@ footer {
 
   <div class="brand">
     <img src="Logo_1.png" alt="Logo Romer Vera">
-    <h1>Nuevos Proyectos Literarios</h1>
+    <h1>Nuevos Proyectos</h1>
   </div>
 
-  <p>Más allá de la técnica: entender, cuestionar y actuar</p>
+  <p>Lo que está tomando forma ahora</p>
 
   
   <!-- 🔥 AQUÍ VA EL MENÚ -->
@@ -288,16 +294,21 @@ footer {
 
     <div class="book-info">
       <h3>Paradoja Mortal</h3>
-      <p>
-        Aquí va una síntesis breve del libro. No expliques todo. Solo lo suficiente 
-        para generar interés. Piensa en esto como un “anzuelo”, no como un resumen completo.
-      </p>
+
+      <div class="auto-text">
+Todo comenzó como una serie de registros sin importancia aparente: notas dispersas, coincidencias incómodas, patrones que nadie estaba buscando.
+
+Pero alguien decidió mirar dos veces… y ya no pudo dejar de hacerlo. A medida que las piezas encajan, lo que parecía casual revela una lógica inquietante, casi intencional.
+
+Cada descubrimiento acerca, pero también desestabiliza. Porque entenderlo no trae alivio, trae consecuencias.
+
+Y hay verdades que, una vez vistas, no se pueden devolver a la sombra.
+      </div>
 
       <a href="#" class="btn primary">Próximamente</a>
     </div>
 
   </div>
-
 </section>
   
 </section>
@@ -368,7 +379,14 @@ document.addEventListener("click", function(e) {
 });
 </script>
   
-
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".auto-text").forEach(block => {
+    const paragraphs = block.innerText.trim().split("\n\n");
+    block.innerHTML = paragraphs.map(p => `<p>${p}</p>`).join("");
+  });
+});
+</script>
   
 </body>
 </html>
