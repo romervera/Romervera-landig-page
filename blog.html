@@ -14,42 +14,66 @@ body {
 }
 
 /* HEADER */
+
+
 header {
-  text-align: center;
-  padding: 15px 20px; /* más delgado */
-  background: linear-gradient(135deg, #111, #222);
-  color: white;
+text-align: center;
+padding: 15px 20px; /* más delgado */
+background: linear-gradient(135deg, #111, #222);
+color: white;
 
-  position: sticky;   /* 🔴 lo fija */
-  top: 0;
-  z-index: 1000;
+position: sticky; /* 🔴 lo fija */
+top: 0;
+z-index: 1000;
 
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3); /* mejora visual */
+box-shadow: 0 2px 10px rgba(0,0,0,0.3); /* mejora visual */
 }
-
 
 header h1 {
-  margin: 0;
-  font-size: 2.2em;
-}
-
-.logo {
-  width: 100px;
-  display: block;
-  margin: 15px auto;
+margin: 0;
+font-size: 22px;
 }
 
 header p {
-  margin: 10px 0 20px;
+font-size: 14px;
+margin: 5px 0 0;
 }
 
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 100px;         
+.header-top {
+display: grid;
+grid-template-columns: 90px 1fr 90px; /* 🔴 clave */
+align-items: center;
 }
+
+.logo-left {
+display: flex;
+align-items: center;
+height: 100%;
+}
+
+.logo-left img {
+height: 100px;
+}
+
+.title-center {
+flex: 1;
+text-align: center;
+}
+
+.title-center h1 {
+margin: 0;
+font-size: 32px;
+font-weight: 700;
+letter-spacing: 1px;
+}
+
+.subtitle {
+text-align: center;
+margin-top: 0px;
+font-size: 15px;
+letter-spacing: 0.5px;
+}
+
 
 .btn {
   padding: 12px 20px;
