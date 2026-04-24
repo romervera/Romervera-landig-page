@@ -14,25 +14,61 @@ body {
 }
 
 header {
-  text-align: center;
-  padding: 15px 20px; /* más delgado */
-  background: linear-gradient(135deg, #111, #222);
-  color: white;
+text-align: center;
+padding: 15px 20px; /* más delgado */
+background: linear-gradient(135deg, #111, #222);
+color: white;
 
-  position: sticky;   /* 🔴 lo fija */
-  top: 0;
-  z-index: 1000;
+position: sticky; /* 🔴 lo fija */
+top: 0;
+z-index: 1000;
 
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3); /* mejora visual */
+box-shadow: 0 2px 10px rgba(0,0,0,0.3); /* mejora visual */
 }
 
 header h1 {
-  margin: 0;
-  font-size: 2.2em;
+margin: 0;
+font-size: 22px;
 }
 
 header p {
-  margin: 10px 0 20px;
+font-size: 14px;
+margin: 5px 0 0;
+}
+
+.header-top {
+display: grid;
+grid-template-columns: 90px 1fr 90px; /* 🔴 clave */
+align-items: center;
+}
+
+.logo-left {
+display: flex;
+align-items: center;
+height: 100%;
+}
+
+.logo-left img {
+height: 100px;
+}
+
+.title-center {
+flex: 1;
+text-align: center;
+}
+
+.title-center h1 {
+margin: 0;
+font-size: 32px;
+font-weight: 700;
+letter-spacing: 1px;
+}
+
+.subtitle {
+text-align: center;
+margin-top: 0px;
+font-size: 15px;
+letter-spacing: 0.5px;
 }
 
 
@@ -313,31 +349,45 @@ section h2 {
 
 <body>
 
+
+
 <header>
 
-  <div class="brand">
-    <img src="Logo_1.png" alt="Logo Romer Vera">
-    <h1>Mis Libros</h1>
-  </div>
+<div class="header-top">
 
-  <p>Confiabilidad, Coaching y Desarrollo Personal</p>
+<!-- IZQUIERDA: LOGO -->
+<div class="logo-left">
+<img src="Logo_1.png" alt="Logo Romer Vera">
+</div>
 
-  
+<!-- CENTRO: NOMBRE -->
+<div class="title-center">
+<h1>Mis Libros</h1>
+</div>
 
-  <!-- 🔥 AQUÍ VA EL MENÚ -->
+<!-- DERECHA: MENÚ -->
+<div class="menu-icon" onclick="toggleMenu()">
+☰
+</div>
 
-  <div class="menu-icon" onclick="toggleMenu()">
-    ☰
-  </div>
+</div>
 
-  <nav id="mobileMenu" class="mobile-menu">
-    <a href="index.html">Inicio</a>
-    <a href="blog.html">Blog</a>
-    <a href="libros.html">Mis Libros</a>
-    <a href="news.html">Proyectos en Desarrollo</a>
-  </nav>
+<!-- SUBTÍTULO ABAJO -->
+<p class="subtitle">
+Confiabilidad, Coaching y Desarrollo Personal
+</p>
+
+<!-- MENÚ DESPLEGABLE -->
+<nav id="mobileMenu" class="mobile-menu">
+<a href="index.html">Inicio</a>
+<a href="blog.html">Blog</a>
+<a href="libros.html">Mis Libros</a>
+<a href="news.html">Proyectos en Desarrollo</a>
+</nav>
 
 </header>
+
+
 
 
 <!-- LIBROS -->
