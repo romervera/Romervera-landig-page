@@ -78,19 +78,6 @@ header p {
   margin-bottom: 20px;
 }
 
-.author-img img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  object-position: 60% 5%;
-  border-radius: 50%;
-  background: #fff;
-  padding: 4px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-
-  display: block;
-  margin: 0 auto;
-}
 
 section {
   padding: 50px 20px;
@@ -291,29 +278,50 @@ h3 {
   pointer-events: auto;
 }
 
+.hero {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
+}
+
 @media (min-width: 768px) {
+
   body {
     font-size: 18px;
   }
+
   .title-center h1 {
     font-size: 40px;
   }
+
   .subtitle {
     font-size: 18px;
   }
+
   .carousel-track img {
     height: 500px;
   }
-  .author-img img {
-    width: 220px;
-    height: 220px;
-  }
+
   section {
     max-width: 1200px;
     padding: 60px 30px;
   }
+
   .carousel {
     max-width: 1000px;
+  }
+
+  /* 🔴 NUEVO: hero para pantallas medianas/grandes */
+  .hero img {
+    height: 420px;
+    object-position: right center;
   }
 }
  
@@ -357,13 +365,15 @@ h3 {
   </nav>
 
 </header>
-<!-- SOBRE EL AUTOR -->
+
+ <section class="hero">
+  <img src="romervera.JPEG" alt="Romer Vera">
+</section>
+ 
+ <!-- SOBRE EL AUTOR -->
 <section>
   <h2>Sobre el Autor</h2>
 
-  <div class="author-img">
-    <img src="Yo.jpeg">
-  </div>
 
   <p>
     Romer Vera es ingeniero de confiabilidad, coach y escritor, con una trayectoria que conecta la ingeniería, el pensamiento crítico y el desarrollo personal. De origen panameño–venezolano, nació en Venezuela, hijo de padre venezolano y madre panameña, y ha construido su camino profesional integrando disciplina técnica con una visión más amplia sobre cómo las personas piensan, deciden y actúan.
