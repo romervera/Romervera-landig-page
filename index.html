@@ -15,35 +15,31 @@ body {
   color: #222;
 }
 
-header {
-  text-align: center;
-  padding: 15px 20px; /* más delgado */
-  background: linear-gradient(135deg, #111, #222);
-  color: white;
-
-  position: sticky;   /* 🔴 lo fija */
+.main-header {
+  position: sticky;
   top: 0;
   z-index: 1000;
 
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3); /* mejora visual */
-}
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("romervera.jpeg");
 
-header h1 {
-  margin: 0;
-  font-size: 22px;
-}
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
 
-header p {
-  font-size: 14px;
-  margin: 5px 0 0;
+  color: white;
+  padding: 10px 20px 15px;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
 
 .header-top {
   display: grid;
-  grid-template-columns: 90px 1fr 90px; /* 🔴 clave */
+  grid-template-columns: auto 1fr auto;
   align-items: center;
+  min-height: 120px;
 }
-
 .logo-left {
   display: flex;
   align-items: center;
