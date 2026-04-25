@@ -281,14 +281,14 @@ h3 {
 .hero {
   width: 100%;
   overflow: hidden;
+  background: #111; /* opcional: relleno elegante */
 }
 
 .hero img {
   width: 100%;
-  height: 380px;
+  height: 160px;
   object-fit: cover;
   object-position: right center;
-  display: block;
 }
 
 @media (min-width: 768px) {
@@ -318,10 +318,18 @@ h3 {
     max-width: 1000px;
   }
 
-  /* 🔴 NUEVO: hero para pantallas medianas/grandes */
+  /* HERO - cintillo */
   .hero img {
-    height: 420px;
+    height: 200px;
+    object-fit: cover;
     object-position: right center;
+  }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1200px) {
+  .hero img {
+    height: 220px;
   }
 }
  
