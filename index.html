@@ -20,13 +20,7 @@ body {
   top: 0;
   z-index: 1000;
 
-  background:
-    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-    url("Header.png");
-
-  background-size: cover;
-  background-position: right center;
-  background-repeat: no-repeat;
+  overflow: hidden; /* 🔴 clave */
 
   color: white;
   padding: 10px 20px 15px;
@@ -34,12 +28,47 @@ body {
   box-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
 
+ 
+ 
 .header-top {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   min-height: 120px;
 }
+
+ /* 🔴 IMAGEN REAL DEL HEADER */
+.header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 220px;
+
+  object-fit: cover;
+  object-position: right top; /* 🔴 NO corta la cabeza */
+
+  z-index: 0;
+}
+
+/* 🔴 CONTENIDO ENCIMA */
+.header-top,
+.subtitle,
+.mobile-menu {
+  position: relative;
+  z-index: 2;
+}
+
+/* 🔴 OVERLAY OSCURO */
+.main-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
 .logo-left {
   display: flex;
   align-items: center;
@@ -333,6 +362,10 @@ h3 {
     background-position: right center;
   }
 
+ .header-bg {
+    height: 260px;
+  }
+
 }
 
 
@@ -367,31 +400,26 @@ h3 {
 
 <header class="main-header">
 
+  <img src="Header.png" class="header-bg">
+
   <div class="header-top">
 
-    <!-- IZQUIERDA: LOGO -->
     <div class="logo-left">
       <img src="Logo_1.png" alt="Logo Romer Vera">
     </div>
 
-    <!-- CENTRO: NOMBRE -->
     <div class="title-center">
       <h1>Romer Vera</h1>
     </div>
 
-    <!-- DERECHA: MENÚ -->
-    <div class="menu-icon" onclick="toggleMenu()">
-      ☰
-    </div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
   </div>
 
-  <!-- SUBTÍTULO -->
   <p class="subtitle">
     Ingeniero | Escritor | Coach
   </p>
 
-  <!-- MENÚ DESPLEGABLE -->
   <nav id="mobileMenu" class="mobile-menu">
     <a href="index.html">Inicio</a>
     <a href="blog.html">Blog</a>
@@ -400,7 +428,6 @@ h3 {
   </nav>
 
 </header>
-
 
  
  <!-- SOBRE EL AUTOR -->
