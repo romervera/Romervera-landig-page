@@ -20,7 +20,7 @@ body {
   top: 0;
   z-index: 1000;
 
-  overflow: hidden; /* 🔴 clave */
+  overflow: visible; /* 🔴 clave */
 
   color: white;
   padding: 10px 20px 15px;
@@ -47,7 +47,7 @@ body {
   height: 220px;
 
   object-fit: cover;
-  object-position: right top; /* 🔴 NO corta la cabeza */
+  object-position: right 20%; /* 🔴 NO corta la cabeza */
 
   z-index: 0;
 }
@@ -357,10 +357,6 @@ h3 {
     min-height: 260px;
   }
 
-.main-header {
-    background-size: cover; 
-    background-position: right center;
-  }
 
  .header-bg {
     height: 260px;
