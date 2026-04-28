@@ -44,10 +44,10 @@ body {
   left: 0;
 
   width: 100%;
-  height: 250px;
+  height: 100%; /* 🔴 ahora sigue al header */
 
   object-fit: cover;
-  object-position: right center; /* 🔴 NO corta la cabeza */
+  object-position: right center;
 
   z-index: 0;
 }
@@ -352,16 +352,15 @@ h3 {
 
 /* Pantallas grandes */
 @media (min-width: 1200px) {
-
-  .header-top {
-    min-height: 280px;
+  .main-header {
+    height: 320px; /* desktop */
   }
+}
 
-
- .header-bg {
-    height: 350px;
+@media (max-width: 768px) {
+  .main-header {
+    height: 200px; /* móvil (como antes) */
   }
-
 }
 
 
