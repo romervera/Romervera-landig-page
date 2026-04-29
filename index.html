@@ -75,7 +75,7 @@ body {
 /* 🔴 OVERLAY OSCURO */
 .main-header::after {
   content: "";
-  position: absolute;
+  position: relative;
   inset: 0;
   background: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.2));
   z-index: 1;
@@ -91,9 +91,14 @@ body {
   height: 100px;
 }
 
+/* 🔴 TÍTULO CENTRADO REAL */
 .title-center {
-  flex: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
+  width: 100%;
+  pointer-events: none; /* evita bloquear el menú */
 }
 
 .title-center h1 {
@@ -103,9 +108,13 @@ body {
   letter-spacing: 1px;
 }
 
+/* 🔴 SUBTÍTULO CENTRADO REAL */
 .subtitle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 110px; /* ajusta si lo quieres más arriba/abajo */
   text-align: center;
-  margin-top: 0px;
   font-size: 15px;
   letter-spacing: 0.5px;
 }
@@ -329,12 +338,13 @@ h3 {
     font-size: 18px;
   }
 
-  .title-center h1 {
-    font-size: 40px;
+  .title-center {
+    top: 35px;
   }
 
   .subtitle {
-    font-size: 18px;
+    top: 80px;
+    font-size: 12px;
   }
 
   .carousel-track img {
