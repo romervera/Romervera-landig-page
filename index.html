@@ -64,7 +64,14 @@ body {
   z-index: 0;
 }
 
+.header-bg img {
+  width: 100%;
+  height: 100%;
 
+  object-fit: cover;
+  object-position: right center;
+}
+ 
 /* 🔴 OVERLAY OSCURO */
 .main-header::after {
   content: "";
@@ -437,7 +444,15 @@ h3 {
 
 <header class="main-header">
 
-  <img src="header_romer.png" class="header-bg">
+<picture class="header-bg">
+
+  <!-- 📱 MÓVIL -->
+  <source media="(max-width: 768px)" srcset="header_mobile.png">
+
+  <!-- 💻 DESKTOP -->
+  <img src="header_desktop.png" alt="Header">
+
+</picture>
 
   <div class="header-top">
 
