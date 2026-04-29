@@ -46,8 +46,8 @@ body {
   width: 100%;
   height: 100%;
 
-  object-fit: contain; /* 🔴 NO RECORTA NUNCA */
-  object-position: right center;
+  object-fit: cover; /* 🔴 NO RECORTA NUNCA */
+  object-position: right 20%;
 
   background-color: #000; /* relleno elegante */
 
@@ -354,9 +354,16 @@ h3 {
 
 /* Pantallas grandes */
 @media (min-width: 1200px) {
+
   .main-header {
-    height: 320px; /* desktop */
+    height: 320px;
   }
+
+  .header-bg {
+    object-fit: contain; /* 🔴 evita corte en desktop */
+    background-color: #000;
+  }
+
 }
 
 @media (max-width: 768px) {
