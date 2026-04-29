@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Romer Vera | Autor</title>
-
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 
  
@@ -103,16 +103,19 @@ body {
 
 .title-center h1 {
   margin: 0;
-  font-size: clamp(32px, 6vw, 60px); /* 🔥 escalable */
-  font-weight: 800;
-  letter-spacing: 1.0px;
-  text-transform: uppercase;
+
+  font-family: 'Playfair Display', serif;
+
+  font-size: clamp(30px, 5vw, 50px);
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+  text-transform: none; /* 🔥 importante */
 
   line-height: 1.1;
 
   color: #ffffff;
-
-  text-shadow: 0 2px 8px rgba(0,0,0,0.6); /* 🔥 legibilidad */
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
 /* 🔴 SUBTÍTULO CENTRADO REAL */
@@ -120,12 +123,14 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 120px;
+  top: 115px;
 
-  font-size: clamp(12px, 2.5vw, 18px);
+  font-family: 'Segoe UI', sans-serif; /* 🔥 contraste */
+
+  font-size: clamp(12px, 2.5vw, 16px);
   letter-spacing: 2px;
 
-  opacity: 0.9;
+  opacity: 0.85;
 }
  
  .author-img {
