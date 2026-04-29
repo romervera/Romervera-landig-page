@@ -103,9 +103,16 @@ body {
 
 .title-center h1 {
   margin: 0;
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 1px;
+  font-size: clamp(28px, 5vw, 52px); /* 🔥 escalable */
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  line-height: 1.1;
+
+  color: #ffffff;
+
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6); /* 🔥 legibilidad */
 }
 
 /* 🔴 SUBTÍTULO CENTRADO REAL */
@@ -113,10 +120,12 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 110px; /* ajusta si lo quieres más arriba/abajo */
-  text-align: center;
-  font-size: 15px;
-  letter-spacing: 0.5px;
+  top: 120px;
+
+  font-size: clamp(12px, 2.5vw, 18px);
+  letter-spacing: 2px;
+
+  opacity: 0.9;
 }
  
  .author-img {
