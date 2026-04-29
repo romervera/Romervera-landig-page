@@ -15,28 +15,40 @@ body {
   color: #222;
 }
 
+/* 🔴 HEADER BASE (IMPORTANTE AGREGAR position: relative) */
 .main-header {
   position: sticky;
   top: 0;
   z-index: 1000;
 
-  overflow: visible; /* 🔴 clave */
+  position: relative; /* 🔴 NECESARIO PARA EL OVERLAY */
+
+  overflow: visible;
 
   color: white;
-  padding: 10px 20px 15px;
+  padding: 10px 20px 5px;
+
+  height: 220px; /* 🔴 ajusta el grosor aquí */
 
   box-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
 
- 
- 
-.header-top {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  min-height: 120px;
+/* 🔴 CONTENIDO ENCIMA */
+.header-top,
+.subtitle,
+.mobile-menu {
+  position: relative;
+  z-index: 2;
 }
 
+/* 🔴 OVERLAY OSCURO */
+.main-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
  /* 🔴 IMAGEN REAL DEL HEADER */
 .header-bg {
   position: absolute;
