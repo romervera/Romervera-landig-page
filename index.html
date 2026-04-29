@@ -64,13 +64,6 @@ body {
   z-index: 0;
 }
 
-/* 🔴 CONTENIDO ENCIMA */
-.header-top,
-.subtitle,
-.mobile-menu {
-  position: relative;
-  z-index: 2;
-}
 
 /* 🔴 OVERLAY OSCURO */
 .main-header::after {
@@ -394,8 +387,8 @@ h3 {
   }
 
   .header-bg {
-    object-fit: cover;          /* 🔥 CORRECTO */
-    object-position: right center;
+    object-fit: contain;        /* 🔥 evita corte */
+    object-position: right bottom;
   }
 
 }
