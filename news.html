@@ -367,16 +367,41 @@ footer {
 }
 
 .book-divider {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  margin: 70px auto 70px auto;
+
+  color: rgba(0,0,0,0.45);
+
+  font-size: 18px;
+}
+
+.book-divider::before,
+.book-divider::after {
+
+  content: "";
+
   width: 120px;
   height: 1px;
-
-  margin: 70px auto 60px auto;
 
   background: linear-gradient(
     to right,
     transparent,
-    rgba(0,0,0,0.35),
-    transparent
+    rgba(0,0,0,0.35)
+  );
+}
+
+.book-divider::after {
+
+  background: linear-gradient(
+    to left,
+    transparent,
+    rgba(0,0,0,0.35)
   );
 }
 
@@ -465,7 +490,7 @@ Y hay verdades que, una vez vistas, no se pueden devolver a la sombra.
 
 </section>
 
-<div class="book-divider"></div>
+<div class="book-divider">◇</div>
 <section class="proyectos">
 
   <!-- TÍTULO PRINCIPAL -->
