@@ -327,21 +327,24 @@ footer {
   margin-bottom: 60px;  /* 🔴 espacio entre libros */
 }
 
-.launch-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
+.launch-wrapper {
+  position: relative;
+  display: inline-block;
 }
 
-.launch-btn img {
-  width: 60px;
+.launch-date-icon {
+
+  position: absolute;
+
+  width: 42px;
   height: auto;
 
-  border-radius: 6px;
+  top: -14px;
+  right: -28px;
 
   transform: rotate(8deg);
 
-  margin-left: 2px;
+  z-index: 10;
 }
   
 </style>
@@ -410,16 +413,15 @@ Cada descubrimiento acerca, pero también desestabiliza. Porque entenderlo no tr
 Y hay verdades que, una vez vistas, no se pueden devolver a la sombra.
   </div>
 
-    <a href="#" class="btn primary launch-btn">
+   <div class="launch-wrapper">
 
- <span>Próximo Lanzamiento 2026</span>
+  <a href="#" class="btn primary">
+    Próximo Lanzamiento 2026
+  </a>
 
-  <img src="may31.png" alt="31 de Mayo">
+  <img class="launch-date-icon" src="may31.png" alt="31 de Mayo">
 
-</a>
-
-    
-  </div>
+</div>
 
 </section>
 
